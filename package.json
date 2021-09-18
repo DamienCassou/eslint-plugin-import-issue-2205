@@ -1,0 +1,38 @@
+{
+  "name": "eslint-plugin-import-issue-2205",
+  "version": "1.0.0",
+  "description": "",
+  "type": "module",
+  "author": {
+    "name": "Damien Cassou"
+  },
+  "contributors": [],
+  "homepage": "https://github.com/DamienCassou/eslint-plugin-import-issue-2205",
+  "bugs": "https://github.com/DamienCassou/eslint-plugin-import-issue-2205/issues",
+  "repository": "https://github.com/DamienCassou/eslint-plugin-import-issue-2205",
+  "license": "MIT",
+  "engines": {
+    "node": ">=10"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "lint": "eslint . --cache --fix",
+    "pretest": "npm run lint",
+    "format": "prettier --loglevel warn --write \"**/*.{js,css,md}\"",
+    "posttest": "npm run format"
+  },
+  "keywords": [],
+  "dependencies": {},
+  "devDependencies": {
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.24.2",
+    "eslint-plugin-jasmine": "^4.1.2",
+    "eslint-plugin-mocha": "^9.0.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "prettier": "^2.4.1"
+  }
+}
