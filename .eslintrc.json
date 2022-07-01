@@ -1,48 +1,46 @@
 {
   "extends": ["eslint:recommended", "prettier", "plugin:import/recommended"],
   "plugins": ["prettier", "jasmine", "mocha"],
-	"parserOptions": {
-		"sourceType": "module",
-		"ecmaVersion": 9
-	},
-	"env": {
-		"es6": true,
+  "parserOptions": {
+    "sourceType": "module",
+    "ecmaVersion": 9
+  },
+  "env": {
+    "es6": true,
     "jasmine": true
-	},
+  },
   "rules": {
     "prettier/prettier": "error",
     "import/no-unused-modules": [
-		  "error",
-		  {
-			  "unusedExports": true,
-			  "missingExports": true,
-			  "ignoreExports":
-				// List of files not exporting anything:
-				[
+      "error",
+      {
+        "unusedExports": true,
+        "missingExports": true,
+        "ignoreExports":
+        [
           "js/main.js"
         ]
-		  }
-	  ]
+      }
+    ]
   },
   "overrides": [
-		{
-			"files": ["js/tests/**/*.js"],
-			"extends": ["eslint:recommended", "prettier", "plugin:import/recommended", "plugin:jasmine/recommended"],
+    {
+      "files": ["js/tests/**/*.js"],
+      "extends": ["eslint:recommended", "prettier", "plugin:import/recommended", "plugin:jasmine/recommended"],
       "rules": {
         "import/no-unused-modules": [
-		      "error",
-		      {
-			      "unusedExports": true,
-			      "missingExports": true,
-			      "ignoreExports":
-				    // List of files not exporting anything:
-				    [
-        	    "js/tests/**/*-tests.js",
-					    "js/tests/tests.js"
+          "error",
+          {
+            "unusedExports": true,
+            "missingExports": true,
+            "ignoreExports":
+            [
+              "js/tests/**/*-tests.js",
+              "js/tests/tests.js"
             ]
-		      }
-	      ]
+          }
+        ]
       }
-		}
-	]
+    }
+  ]
 }
